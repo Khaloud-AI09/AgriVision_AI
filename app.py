@@ -16,7 +16,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("Plant Thirst Detector")
+st.title("AgriVision AI")
 
 # 3. Load Model Safely
 @st.cache_resource
@@ -90,11 +90,11 @@ if img_file is not None and model is not None:
 
 # 6. Advanced AI Diagnostics Section (Using the SAME image)
 st.divider()
-st.title("🌱 AI Plant Care & Diagnostics")
+st.title(" AI Plant Care & Diagnostics")
 
 if img_file is not None:
     # Simple trigger button so it only runs when your dad clicks it
-    if st.button("🧠 Analyze Plant Health & Care"):
+    if st.button(" Analyze Plant Health & Care"):
         with st.spinner(" Consulting the AI Botanist..."):
             try:
                 # Re-open the unified file for Gemini API
@@ -108,20 +108,20 @@ if img_file is not None:
                 Analyze this plant photo carefully. Provide a highly actionable, 
                 gardening-focused response under these exact Markdown headers:
                 
-                ### 🏷️ Plant Identity
+                ###  Plant Identity
                 Identify the exact common name and variety.
                 
-                ### 🏥 Health & Disease Report
+                ###  Health & Disease Report
                 Look closely at leaves, stems, and soil. Note if there are any signs of:
                 - Fungal/bacterial infections
                 - Pest infestations
                 - Nutrient deficiencies
                 If diseased, give step-by-step instructions to treat it.
                 
-                ### 💧 Optimal Watering Schedule
+                ###  Optimal Watering Schedule
                 How often and exactly how much water does this specific plant prefer?
                 
-                ### 🪵 Manure & Fertilizer Guide
+                ###  Manure & Fertilizer Guide
                 What specific type of manure or fertilizer does it love, how much should be applied, and at what frequency?
                 """
                 
