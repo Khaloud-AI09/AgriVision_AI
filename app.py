@@ -100,7 +100,7 @@ st.markdown("""
         overflow: hidden;
     }
     .cottage-hero::before {
-        content: "🌿  ✦  🍃";
+        content: "  ✦  ";
         position: absolute;
         right: 28px;
         top: 20px;
