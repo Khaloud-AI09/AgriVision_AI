@@ -334,7 +334,7 @@ with col_right:
 
         is_thirsty = "thirsty" in class_name.lower()
         card_cls = "specimen-card thirsty" if is_thirsty else "specimen-card"
-        glyph = "🥀" if is_thirsty else "🌿"
+        glyph = "" if is_thirsty else ""
         note = (
             "Leaves & soil signal thirst — offer a gentle, thorough drink soon."
             if is_thirsty else
