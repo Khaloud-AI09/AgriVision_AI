@@ -294,7 +294,7 @@ col_left, col_right = st.columns([1, 1.25], gap="large")
 
 with col_left:
     st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
-    st.markdown("### 🍂 Specimen Capture")
+    st.markdown("###  Specimen Capture")
     tab_upload, tab_cam = st.tabs(["📁 Press / Upload Leaf", "📷 Lantern Camera"])
 
     img_file = None
