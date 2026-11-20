@@ -8,7 +8,7 @@ from google import genai
 # 1. Page Configuration
 st.set_page_config(
     page_title="AgriVision AI | Dark Cottagecore Botanist",
-    page_icon="🌙",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -259,7 +259,7 @@ st.markdown("""
 
 # Optional Sidebar for API Key fallback
 with st.sidebar:
-    st.markdown("### 🗝️ Conservatory Key")
+    st.markdown("###  Conservatory Key")
     api_key_input = st.text_input(
         "Gemini API Key",
         type="password",
@@ -317,7 +317,7 @@ with col_left:
 
 with col_right:
     st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
-    st.markdown("### 🔮 Botanical Telemetry & Diagnostics")
+    st.markdown("###  Botanical Telemetry & Diagnostics")
 
     if original_image is not None and model is not None and class_names:
         # Phase A: Keras Hydration Check
@@ -354,10 +354,10 @@ with col_right:
         st.markdown("---")
 
         # Phase B: AI Botanist Deep Diagnostics
-        st.markdown("### 📜 Apothecary & Care Almanac")
-        if st.button("✨ Unveil Full Botanist Diagnosis"):
+        st.markdown("### Apothecary & Care Almanac")
+        if st.button(" Unveil Full Botanist Diagnosis"):
             if not os.environ.get("GEMINI_API_KEY"):
-                st.warning("🗝️ Add your `GEMINI_API_KEY` in the left sidebar or environment variables first.")
+                st.warning(" Add your `GEMINI_API_KEY` in the left sidebar or environment variables first.")
             else:
                 with st.spinner("Reading leaf veins, soil whispers, and care lore..."):
                     try:
@@ -366,20 +366,20 @@ with col_right:
                         Analyze this plant photo carefully. Provide a concise, practical,
                         gardening-focused care guide using these exact Markdown sections:
 
-                        ### 🌱 Plant Identity
+                        ###  Plant Identity
                         Identify the common name and likely variety.
 
-                        ### 🔬 Health & Disease Check
+                        ###  Health & Disease Check
                         Examine leaves, stems, and visible soil for:
                         - Fungal or bacterial infections
                         - Pest infestations
                         - Nutrient deficiencies
                         If healthy, confirm it. If issues exist, give clear step-by-step treatment.
 
-                        ### 💧 Optimal Watering Schedule
+                        ###  Optimal Watering Schedule
                         Specify watering frequency, amount, and soil-check tips for this species.
 
-                        ### 🌿 Manure & Fertilizer Guide
+                        ###  Manure & Fertilizer Guide
                         Recommend the best organic manure or fertilizer, dosage, and how often to apply it.
                         """
                         response = client.models.generate_content(
@@ -393,7 +393,7 @@ with col_right:
     else:
         st.markdown("""
             <div class="specimen-card">
-                <div class="specimen-title">🌙 Awaiting a Specimen</div>
+                <div class="specimen-title"> Awaiting a Specimen</div>
                 <p class="specimen-sub">Upload a leaf photo or snap one with your camera on the left to begin hydration telemetry and deep plant diagnostics.</p>
             </div>
         """, unsafe_allow_html=True)
